@@ -1,0 +1,32 @@
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix ex: <http://example.com/> .
+
+<#logicalsource>
+    rml:source "../data/input-json/cutted/contracts_223fz_201803-head-100.json" ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$.*" .
+
+<#contract>
+    rml:logicalSource <#logicalsource> ;
+    rr:subjectMap [
+        rr:template "http://example.com/contracts/{id}" ;
+        rr:class ex:Contract
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ex:number ;
+        rr:objectMap [ rml:reference "$.number" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ex:created ;
+        rr:objectMap [ rml:reference "$.contractCreateDate" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ex:customer ;
+        rr:objectMap [ rr:template "http://example.com/org/{$.customer.OGRN}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ex:supplier ;
+        rr:objectMap [ rr:template "http://example.com/org/{$.suppliers.[0].ogrn}" ]
+    ] .

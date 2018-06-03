@@ -1,0 +1,23 @@
+PREFIX ex: <http://example.com/>
+PREFIX iter: <http://w3id.org/sparql-generate/iter/>
+PREFIX fn: <http://w3id.org/sparql-generate/fn/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+GENERATE {
+    ?contract a ex:Contract ;
+        ex:number ?cNumber ;
+        ex:created ?cCreated ;
+        ex:customer ?customer ;
+        ex:supplier ?supplier .
+}
+SOURCE <file://home/kolchinmax/data/input-xml/cutted/contracts_223fz_201803-head-100000.xml> AS ?source
+ITERATOR iter:XPath(?source, "/root/root") AS ?element
+WHERE {
+    BIND(IRI(CONCAT("http://example.com/contract/", fn:XPath(?element, "root/id/text()"))) AS ?contract)
+    BIND(fn:XPath(?element, "root/number/text()") AS ?cNumber)
+    BIND(xsd:date(fn:XPath(?element, "root/contractCreateDate/text()")) AS ?cCreated)
+    BIND(IRI(CONCAT("http://example.com/org/", fn:XPath(?element, "root/customer/OGRN/text()"))) AS ?customer)
+    BIND(IRI(CONCAT("http://example.com/org/", fn:XPath(?element, "root/suppliers/suppliers/ogrn/text()"))) AS ?supplier)
+
+    FILTER(BOUND(?supplier))
+}

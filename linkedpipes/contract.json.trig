@@ -1,0 +1,157 @@
+
+<http://104.199.34.177:8080/resources/pipelines/created-1522927142145> {
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145> a <http://linkedpipes.com/ontology/Pipeline> ;
+		<http://etl.linkedpipes.com/ontology/version> "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+		<http://linkedpipes.com/ontology/profile> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/2> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "ClearSpending JSON" .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/2> a <http://linkedpipes.com/ontology/ExecutionProfile> ;
+		<http://linkedpipes.com/ontology/rdfRepositoryPolicy> <http://linkedpipes.com/ontology/repository/SingleRepository> ;
+		<http://linkedpipes.com/ontology/rdfRepositoryType> <http://linkedpipes.com/ontology/repository/NativeStore> .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/10> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "OutputRdf" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/7> ;
+		<http://linkedpipes.com/ontology/targetBinding> "InputRdf" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/3> .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/7> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/18> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/t-filesToRdfGraph/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "320"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "580"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "Files to RDF single graph" .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/3> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/22> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/t-sparqlConstruct/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "680"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "460"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "SPARQL construct" .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/11> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "OutputRdf" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/3> ;
+		<http://linkedpipes.com/ontology/targetBinding> "InputRdf" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/5> .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/5> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/graph/20> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/t-rdfToFile/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "980"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "420"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "RDF to file" .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/12> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "OutputFile" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/5> ;
+		<http://linkedpipes.com/ontology/targetBinding> "FilesInput" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/4> .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/4> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/16> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/l-filesToLocal/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "960"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "540"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "Files to local" .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/13> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "OutputFiles" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/8> ;
+		<http://linkedpipes.com/ontology/targetBinding> "InputFiles" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/7> .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/8> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/23> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/t-jsonToJsonLd/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "300"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "480"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "JSON to JSON-LD" .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/components/f7d62645-fdeb-44ec-bca5-b327b57e9a2a> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/components/f7d62645-fdeb-44ec-bca5-b327b57e9a2a/configuration> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/e-filesFromLocal/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "280"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "320"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "Files from local" .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/connection/4915ef16-8830-4993-8437-e79961ffad3b> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "FilesOutput" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/components/f7d62645-fdeb-44ec-bca5-b327b57e9a2a> ;
+		<http://linkedpipes.com/ontology/targetBinding> "InputFiles" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://104.199.34.177:8080/resources/pipelines/created-1522927142145/8> .
+}
+
+<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/16> {
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/16> a <http://plugins.linkedpipes.com/ontology/l-filesToLocal#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/l-filesToLocal#path> "/pipes-data/output" ;
+		<http://plugins.linkedpipes.com/ontology/l-filesToLocal#pathControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}
+
+<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/18> {
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/18> a <http://plugins.linkedpipes.com/ontology/t-filesToRdf#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/t-filesToRdf#commitSize> "50000"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://plugins.linkedpipes.com/ontology/t-filesToRdf#commitSizeControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-filesToRdf#mimeType> "application/ld+json" ;
+		<http://plugins.linkedpipes.com/ontology/t-filesToRdf#mimeTypeControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-filesToRdf#softFail> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://plugins.linkedpipes.com/ontology/t-filesToRdf#softFailControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}
+
+<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/22> {
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/3/configuration> a <http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#query> """PREFIX ex: <http://example.org/>
+PREFIX l: <http://localhost/>
+
+CONSTRUCT {
+  ?contractUri a ex:Contract ;
+    ex:number ?contractNumber ;
+    ex:created ?contractCreated ;
+    ex:customer ?customerUri ;
+    ex:supplier ?supplierUri .
+} WHERE {
+  ?a l:id ?contractId ;
+     l:number ?contractNumber ;
+     l:contractCreateDate ?_contractCreated ;
+     l:customer/l:OGRN ?customerOgrn ;
+     l:suppliers/l:ogrn ?supplierOgrn .
+  
+  BIND(xsd:dateTime(?_contractCreated) AS ?contractCreated)
+  BIND(IRI(CONCAT(\"http://example.com/contract/\", ?contractId)) AS ?contractUri)
+  BIND(IRI(CONCAT(\"http://example.com/org/\", ?customerOgrn)) AS ?customerUri)
+  BIND(IRI(CONCAT(\"http://example.com/org/\", ?supplierOgrn)) AS ?supplierUri)
+}""" ;
+		<http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#queryControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}
+
+<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/23> {
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/23> a <http://plugins.linkedpipes.com/ontology/t-jsonToJsonLd#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/t-jsonToJsonLd#context> "{ \"@vocab\": \"http://localhost/\" }" ;
+		<http://plugins.linkedpipes.com/ontology/t-jsonToJsonLd#contextControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-jsonToJsonLd#dataPredicate> <http://localhost/ontology/data> ;
+		<http://plugins.linkedpipes.com/ontology/t-jsonToJsonLd#dataPredicateControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-jsonToJsonLd#encoding> "UTF-8" ;
+		<http://plugins.linkedpipes.com/ontology/t-jsonToJsonLd#encodingControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-jsonToJsonLd#filePredicate> <http://localhost/ontology/filePredicate> ;
+		<http://plugins.linkedpipes.com/ontology/t-jsonToJsonLd#filePredicateControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-jsonToJsonLd#fileReference> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://plugins.linkedpipes.com/ontology/t-jsonToJsonLd#fileReferenceControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-jsonToJsonLd#type> <http://localhost/ontology/Data> ;
+		<http://plugins.linkedpipes.com/ontology/t-jsonToJsonLd#typeControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}
+
+<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/components/f7d62645-fdeb-44ec-bca5-b327b57e9a2a/configuration> {
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/components/f7d62645-fdeb-44ec-bca5-b327b57e9a2a/configuration> a <http://plugins.linkedpipes.com/ontology/e-filesFromLocal#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/e-filesFromLocal#path> "/input-data/input-json/cutted/contracts_223fz_201803-head-100000.json" ;
+		<http://plugins.linkedpipes.com/ontology/e-filesFromLocal#pathControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}
+
+<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/graph/20> {
+	<http://104.199.34.177:8080/resources/pipelines/created-1522927142145/19> a <http://plugins.linkedpipes.com/ontology/t-rdfToFile#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileName> "data.ttl" ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileNameControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileType> "text/turtle" ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileTypeControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#graphUri> "http://localhost/default" ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#graphUriControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}

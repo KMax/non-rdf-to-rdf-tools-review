@@ -1,0 +1,17 @@
+PREFIX ex: <http://example.com/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+    ?contractUri a ex:Contract ;
+        ex:number ?number ;
+        ex:created ?created ;
+        ex:customer ?customerUri ;
+        ex:supplier ?supplierUri .
+}
+FROM <file:../data/input-csv/cutted/contracts_223fz_201803-head-100.csv>
+WHERE {
+    BIND(xsd:date(?contractCreateDate) AS ?created)
+    BIND(IRI(CONCAT("http://example.com/contract/", ?id)) AS ?contractUri)
+    BIND(IRI(CONCAT("http://example.com/org/", ?customer_OGRN)) AS ?customerUri)
+    BIND(IRI(CONCAT("http://example.com/org/", ?suppliers_0_ogrn)) AS ?supplierUri)
+}

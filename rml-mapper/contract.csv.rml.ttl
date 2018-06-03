@@ -1,0 +1,32 @@
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+
+<#logicalsource>
+    rml:source "/home/kolchinmax/data/input-csv/cutted/contracts_223fz_201803-head-55000.csv" ;
+    rml:referenceFormulation ql:CSV .
+
+<#contract>
+    rml:logicalSource <#logicalsource> ;
+    rr:subjectMap [
+        rr:template "http://example.com/contracts/{id}" ;
+        rr:class ex:Contract
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ex:number ;
+        rr:objectMap [ rml:reference "number" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ex:created ;
+        rr:objectMap [ rml:reference "contractCreateDate" ; rr:datatype xsd:date ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ex:customer ;
+        rr:objectMap [ rr:template "http://example.com/org/{customer_OGRN}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ex:supplier ;
+        rr:objectMap [ rr:template "http://example.com/org/{suppliers_0_ogrn}" ]
+    ] .

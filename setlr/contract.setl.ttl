@@ -1,0 +1,39 @@
+@prefix prov:          <http://www.w3.org/ns/prov#> .
+@prefix dcat:          <http://www.w3.org/ns/dcat#> .
+@prefix dcterms:       <http://purl.org/dc/terms/> .
+@prefix void:          <http://rdfs.org/ns/void#> .
+@prefix setl:          <http://purl.org/twc/vocab/setl/> .
+@prefix csvw:          <http://www.w3.org/ns/csvw#> .
+@prefix pv:            <http://purl.org/net/provenance/ns#> .
+@prefix :              <http://example.com/> .
+
+:table a csvw:Table, setl:Table ;
+    csvw:delimiter "," ;
+    prov:wasGeneratedBy [
+        a setl:Extract ;
+        prov:used <../data/input-csv/cutted/contracts_223fz_201803-head-55000.csv>
+    ] .
+
+:contract a void:Dataset ;
+    prov:wasGeneratedBy [
+        a setl:Transform, setl:JSLDT ;
+        prov:used :table ;
+        setl:hasContext '''{
+            "ex": "http://example.com/"
+        }''' ;
+        prov:value '''[{
+            "@id": "http://example.com/contract/{{row.id}}",
+            "@type": "ex:Contract",
+            "ex:number": "{{row.number}}",
+            "ex:created": "{{row.contractCreateDate}}",
+            "ex:customer": "http://example.com/org/{{row.customer_OGRN}}",
+            "ex:supplier": "http://example.com/org/{{row.suppliers_0_ogrn}}"
+        }]'''
+    ] .
+
+<contract.ttl> a pv:File ;
+    dcterms:format "text/turtle" ;
+    prov:wasGeneratedBy [
+        a setl:Load ;
+        prov:used :contract ;
+    ] .

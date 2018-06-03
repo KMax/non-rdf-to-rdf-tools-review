@@ -1,0 +1,156 @@
+
+<http://35.189.204.242:8080/resources/pipelines/created-1523895340455> {
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455> a <http://linkedpipes.com/ontology/Pipeline> ;
+		<http://etl.linkedpipes.com/ontology/version> "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+		<http://linkedpipes.com/ontology/profile> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/profile/default> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "ClearSpending XML" .
+	
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/profile/default> a <http://linkedpipes.com/ontology/ExecutionProfile> ;
+		<http://linkedpipes.com/ontology/rdfRepositoryPolicy> <http://linkedpipes.com/ontology/repository/SingleRepository> ;
+		<http://linkedpipes.com/ontology/rdfRepositoryType> <http://linkedpipes.com/ontology/repository/NativeStore> .
+	
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/088694bd-baad-4a88-8af3-a9cd311116fb> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/088694bd-baad-4a88-8af3-a9cd311116fb/configuration> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/e-filesFromLocal/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "160"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "120"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "Files from local" .
+	
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/87ae828a-37c8-4672-83aa-7fbb413db284> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/87ae828a-37c8-4672-83aa-7fbb413db284/configuration> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/l-filesToLocal/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "1000"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "380"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "Files to local" .
+	
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/88e98710-2f90-4935-9a3a-e8556d7a4619> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/88e98710-2f90-4935-9a3a-e8556d7a4619/configuration> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/t-graphMerger/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "480"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "380"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "Graph merger" .
+	
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/a3ab1fb4-3b02-4f73-a0a8-a7361e7980ee> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/a3ab1fb4-3b02-4f73-a0a8-a7361e7980ee/configuration> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/t-rdfToFile/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "760"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "360"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "RDF to file" .
+	
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/afdaa9e9-4ee4-4daa-ae13-7787836f796f> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/afdaa9e9-4ee4-4daa-ae13-7787836f796f/configuration> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/t-xslt/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "160"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "240"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "XSLT transformer" .
+	
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/b4aac510-cc6f-4d8e-903a-c797201b255d> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/b4aac510-cc6f-4d8e-903a-c797201b255d/configuration> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/t-filesToRdf/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "500"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "220"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "Files to RDF" .
+	
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/connection/8455f6f7-6854-474c-9bfe-a6183f4967df> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "OutputFile" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/a3ab1fb4-3b02-4f73-a0a8-a7361e7980ee> ;
+		<http://linkedpipes.com/ontology/targetBinding> "FilesInput" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/87ae828a-37c8-4672-83aa-7fbb413db284> .
+	
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/connection/85173fea-1acd-4b88-8c5b-ab250f7c74ea> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "FilesOutput" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/afdaa9e9-4ee4-4daa-ae13-7787836f796f> ;
+		<http://linkedpipes.com/ontology/targetBinding> "InputFiles" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/b4aac510-cc6f-4d8e-903a-c797201b255d> .
+	
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/connection/a74a67e7-4bf6-48aa-96c4-54743a1012c2> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "OutputRdf" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/b4aac510-cc6f-4d8e-903a-c797201b255d> ;
+		<http://linkedpipes.com/ontology/targetBinding> "InputRdf" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/88e98710-2f90-4935-9a3a-e8556d7a4619> .
+	
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/connection/b9c4dab2-a01a-4307-93fa-9408ddd0abef> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "OutputRdf" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/88e98710-2f90-4935-9a3a-e8556d7a4619> ;
+		<http://linkedpipes.com/ontology/targetBinding> "InputRdf" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/a3ab1fb4-3b02-4f73-a0a8-a7361e7980ee> .
+	
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/connection/dc94304c-1c2b-4de7-9627-c682c774eb72> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "FilesOutput" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/088694bd-baad-4a88-8af3-a9cd311116fb> ;
+		<http://linkedpipes.com/ontology/targetBinding> "FilesInput" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/afdaa9e9-4ee4-4daa-ae13-7787836f796f> .
+}
+
+<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/088694bd-baad-4a88-8af3-a9cd311116fb/configuration> {
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/088694bd-baad-4a88-8af3-a9cd311116fb/configuration> a <http://plugins.linkedpipes.com/ontology/e-filesFromLocal#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/e-filesFromLocal#path> "/input-data/input-xml/cutted/contracts_223fz_201803-head-100000.xml" ;
+		<http://plugins.linkedpipes.com/ontology/e-filesFromLocal#pathControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}
+
+<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/87ae828a-37c8-4672-83aa-7fbb413db284/configuration> {
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/87ae828a-37c8-4672-83aa-7fbb413db284/configuration> a <http://plugins.linkedpipes.com/ontology/l-filesToLocal#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/l-filesToLocal#path> "/pipes-data/output" ;
+		<http://plugins.linkedpipes.com/ontology/l-filesToLocal#pathControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}
+
+<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/88e98710-2f90-4935-9a3a-e8556d7a4619/configuration> {
+	<http://etl.linkedpipes.com/resources/components/t-graphMerger/0.0.0/new/1> a <http://plugins.linkedpipes.com/ontology/t-graphMerger#Configuration> .
+}
+
+<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/a3ab1fb4-3b02-4f73-a0a8-a7361e7980ee/configuration> {
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/a3ab1fb4-3b02-4f73-a0a8-a7361e7980ee/configuration> a <http://plugins.linkedpipes.com/ontology/t-rdfToFile#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileName> "data.ttl" ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileNameControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileType> "application/n-triples" ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileTypeControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#graphUri> <http://localhost/default> ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#graphUriControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}
+
+<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/afdaa9e9-4ee4-4daa-ae13-7787836f796f/configuration> {
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/afdaa9e9-4ee4-4daa-ae13-7787836f796f/configuration> a <http://plugins.linkedpipes.com/ontology/t-xslt#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/t-xslt#extension> "" ;
+		<http://plugins.linkedpipes.com/ontology/t-xslt#extensionControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-xslt#skipOnError> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://plugins.linkedpipes.com/ontology/t-xslt#skipOnErrorControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-xslt#template> """<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<xsl:stylesheet	xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\"
+                   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"
+                   xmlns:ex=\"http://example.com/\" version=\"1.0\">
+
+    <xsl:output method=\"xml\" encoding=\"UTF-8\"/>
+
+    <xsl:template match=\"/root\">
+        <rdf:RDF>
+            <xsl:apply-templates/>
+        </rdf:RDF>
+    </xsl:template>
+
+    <xsl:template match=\"/root/root\">
+        <rdf:Description rdf:about=\"http://example.com/contract/{id}\">
+            <rdf:type rdf:resource=\"http://example.com/Contract\"/>
+            <ex:number><xsl:value-of select=\"number\"/></ex:number>
+            <ex:created rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">
+                <xsl:value-of select=\"contractCreateDate\"/>
+            </ex:created>
+            <ex:customer rdf:resource=\"http://example.com/org/{customer/OGRN}\"/>
+            <ex:supplier rdf:resource=\"http://example.com/org/{suppliers/suppliers/ogrn}\"/>
+        </rdf:Description>
+    </xsl:template>
+
+</xsl:stylesheet>""" ;
+		<http://plugins.linkedpipes.com/ontology/t-xslt#templateControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-xslt#threads> "1"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://plugins.linkedpipes.com/ontology/t-xslt#threadsControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}
+
+<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/b4aac510-cc6f-4d8e-903a-c797201b255d/configuration> {
+	<http://35.189.204.242:8080/resources/pipelines/created-1523895340455/components/b4aac510-cc6f-4d8e-903a-c797201b255d/configuration> a <http://plugins.linkedpipes.com/ontology/t-filesToRdf#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/t-filesToRdf#commitSize> "50000"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://plugins.linkedpipes.com/ontology/t-filesToRdf#commitSizeControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-filesToRdf#mimeType> "application/rdf+xml" ;
+		<http://plugins.linkedpipes.com/ontology/t-filesToRdf#mimeTypeControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-filesToRdf#softFail> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://plugins.linkedpipes.com/ontology/t-filesToRdf#softFailControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}

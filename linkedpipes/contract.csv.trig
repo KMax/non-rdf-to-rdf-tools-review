@@ -1,0 +1,187 @@
+
+<http://104.199.34.177:8080/resources/pipelines/created-1523441328124> {
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124> a <http://linkedpipes.com/ontology/Pipeline> ;
+		<http://etl.linkedpipes.com/ontology/version> "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+		<http://linkedpipes.com/ontology/profile> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/profile/default> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "Clearspending CSV" .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/profile/default> a <http://linkedpipes.com/ontology/ExecutionProfile> ;
+		<http://linkedpipes.com/ontology/rdfRepositoryPolicy> <http://linkedpipes.com/ontology/repository/SingleRepository> ;
+		<http://linkedpipes.com/ontology/rdfRepositoryType> <http://linkedpipes.com/ontology/repository/NativeStore> .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/12dc751c-93a6-42fd-8cb4-c41b77024b60> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/12dc751c-93a6-42fd-8cb4-c41b77024b60/configuration> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/e-filesFromLocal/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "-60"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "80"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "Files from local" .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/149ac558-fac8-4bc5-a2ff-627ff3f2a980> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/149ac558-fac8-4bc5-a2ff-627ff3f2a980/configuration> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/t-rdfToFile/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "340"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "80"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "RDF to file" .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/186ad4c5-dec1-4e5d-9d4e-01c05472740d> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/186ad4c5-dec1-4e5d-9d4e-01c05472740d/configuration> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/t-sparqlConstruct/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "320"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "320"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "SPARQL construct" .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/3559edfe-0160-4f9c-9fea-a52183ef78ef> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/3559edfe-0160-4f9c-9fea-a52183ef78ef/configuration> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/l-filesToLocal/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "500"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "200"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "Files to local" .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/a488a2c8-606a-463d-a4d8-24104a608d5f> a <http://linkedpipes.com/ontology/Component> ;
+		<http://linkedpipes.com/ontology/configurationGraph> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/a488a2c8-606a-463d-a4d8-24104a608d5f/configuration> ;
+		<http://linkedpipes.com/ontology/template> <http://etl.linkedpipes.com/resources/components/t-tabular/0.0.0> ;
+		<http://linkedpipes.com/ontology/x> "180"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://linkedpipes.com/ontology/y> "180"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/2004/02/skos/core#prefLabel> "Tabular" .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/connection/0914d1e6-02b5-41a7-89a5-f2dd3b77dde3> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "OutputFile" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/149ac558-fac8-4bc5-a2ff-627ff3f2a980> ;
+		<http://linkedpipes.com/ontology/targetBinding> "FilesInput" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/3559edfe-0160-4f9c-9fea-a52183ef78ef> .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/connection/24fcf15f-2e82-4817-8327-258f5d216460> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "OutputRdf" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/186ad4c5-dec1-4e5d-9d4e-01c05472740d> ;
+		<http://linkedpipes.com/ontology/targetBinding> "InputRdf" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/149ac558-fac8-4bc5-a2ff-627ff3f2a980> .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/connection/51e63f41-127a-44ae-b304-16e00dc2b8dd> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "OutputRdf" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/a488a2c8-606a-463d-a4d8-24104a608d5f> ;
+		<http://linkedpipes.com/ontology/targetBinding> "InputRdf" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/186ad4c5-dec1-4e5d-9d4e-01c05472740d> .
+	
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/connection/ea47c57a-7d7b-434b-a03f-b1041c927001> a <http://linkedpipes.com/ontology/Connection> ;
+		<http://linkedpipes.com/ontology/sourceBinding> "FilesOutput" ;
+		<http://linkedpipes.com/ontology/sourceComponent> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/12dc751c-93a6-42fd-8cb4-c41b77024b60> ;
+		<http://linkedpipes.com/ontology/targetBinding> "InputFiles" ;
+		<http://linkedpipes.com/ontology/targetComponent> <http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/a488a2c8-606a-463d-a4d8-24104a608d5f> .
+}
+
+<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/12dc751c-93a6-42fd-8cb4-c41b77024b60/configuration> {
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/12dc751c-93a6-42fd-8cb4-c41b77024b60/configuration> a <http://plugins.linkedpipes.com/ontology/e-filesFromLocal#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/e-filesFromLocal#path> "/input-data/input-csv/cutted/contracts_223fz_201803-head-55000.csv" ;
+		<http://plugins.linkedpipes.com/ontology/e-filesFromLocal#pathControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}
+
+<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/149ac558-fac8-4bc5-a2ff-627ff3f2a980/configuration> {
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/149ac558-fac8-4bc5-a2ff-627ff3f2a980/configuration> a <http://plugins.linkedpipes.com/ontology/t-rdfToFile#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileName> "data.ttl" ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileNameControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileType> "text/turtle" ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileTypeControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#graphUri> <http://localhost/default> ;
+		<http://plugins.linkedpipes.com/ontology/t-rdfToFile#graphUriControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}
+
+<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/186ad4c5-dec1-4e5d-9d4e-01c05472740d/configuration> {
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/186ad4c5-dec1-4e5d-9d4e-01c05472740d/configuration> a <http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#query> """PREFIX ex: <http://example.com/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT { 
+?contract a ex:Contract ;
+  ex:created ?created ;
+  ex:customer ?customerUri ;
+  ex:number ?number ;
+  ex:supplier ?supplierUri .  
+} WHERE { 
+  ?contract <http://example.com/created> ?_created ;
+        <http://example.com/customer> ?_customer ;
+        <http://example.com/number> ?number ;
+        <http://example.com/supplier> ?_supplier .
+  BIND(STRDT(?_created, xsd:date) AS ?created)
+  BIND(IRI(CONCAT(\"http://example.com/org/\", ?_customer)) AS ?customerUri)
+  BIND(IRI(CONCAT(\"http://example.com/org/\", ?_supplier)) AS ?supplierUri)
+}""" ;
+		<http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#queryControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}
+
+<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/3559edfe-0160-4f9c-9fea-a52183ef78ef/configuration> {
+	<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/3559edfe-0160-4f9c-9fea-a52183ef78ef/configuration> a <http://plugins.linkedpipes.com/ontology/l-filesToLocal#Configuration> ;
+		<http://plugins.linkedpipes.com/ontology/l-filesToLocal#path> "/pipes-data/output" ;
+		<http://plugins.linkedpipes.com/ontology/l-filesToLocal#pathControl> <http://plugins.linkedpipes.com/resource/configuration/None> .
+}
+
+<http://104.199.34.177:8080/resources/pipelines/created-1523441328124/components/a488a2c8-606a-463d-a4d8-24104a608d5f/configuration> {
+	<http://etl.linkedpipes.com/resources/components/t-tabular/0.0.0/new/1> a <http://www.w3.org/ns/csvw#Schema> ;
+		<http://www.w3.org/ns/csvw#aboutUrl> "http://example.com/{id}" ;
+		<http://www.w3.org/ns/csvw#column> <http://localhost/resources/temp/E6ryxTM> , <http://localhost/resources/temp/vyfc6fV> , <http://localhost/resources/temp/JDK5m1E> , <http://localhost/resources/temp/PFdN7Bu> .
+	
+	<http://localhost/resources/temp/E6ryxTM> a <http://www.w3.org/ns/csvw#Column> ;
+		<http://www.w3.org/ns/csvw#aboutUrl> "" ;
+		<http://www.w3.org/ns/csvw#datatype> "http://www.w3.org/2001/XMLSchema#string" ;
+		<http://www.w3.org/ns/csvw#lang> "" ;
+		<http://www.w3.org/ns/csvw#name> "number" ;
+		<http://www.w3.org/ns/csvw#propertyUrl> "number" ;
+		<http://www.w3.org/ns/csvw#supressOutput> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://www.w3.org/ns/csvw#valueUrl> "" .
+	
+	<http://localhost/resources/temp/vyfc6fV> a <http://www.w3.org/ns/csvw#Column> ;
+		<http://www.w3.org/ns/csvw#aboutUrl> "" ;
+		<http://www.w3.org/ns/csvw#datatype> "http://www.w3.org/2001/XMLSchema#string" ;
+		<http://www.w3.org/ns/csvw#lang> "" ;
+		<http://www.w3.org/ns/csvw#name> "contractCreateDate" ;
+		<http://www.w3.org/ns/csvw#propertyUrl> "created" ;
+		<http://www.w3.org/ns/csvw#supressOutput> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://www.w3.org/ns/csvw#valueUrl> "" .
+	
+	<http://localhost/resources/temp/JDK5m1E> a <http://www.w3.org/ns/csvw#Column> ;
+		<http://www.w3.org/ns/csvw#aboutUrl> "" ;
+		<http://www.w3.org/ns/csvw#datatype> "http://www.w3.org/2001/XMLSchema#string" ;
+		<http://www.w3.org/ns/csvw#lang> "" ;
+		<http://www.w3.org/ns/csvw#name> "customer_OGRN" ;
+		<http://www.w3.org/ns/csvw#propertyUrl> "customer" ;
+		<http://www.w3.org/ns/csvw#supressOutput> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://www.w3.org/ns/csvw#valueUrl> "" .
+	
+	<http://localhost/resources/temp/PFdN7Bu> a <http://www.w3.org/ns/csvw#Column> ;
+		<http://www.w3.org/ns/csvw#aboutUrl> "" ;
+		<http://www.w3.org/ns/csvw#datatype> "http://www.w3.org/2001/XMLSchema#string" ;
+		<http://www.w3.org/ns/csvw#lang> "" ;
+		<http://www.w3.org/ns/csvw#name> "suppliers_0_ogrn" ;
+		<http://www.w3.org/ns/csvw#propertyUrl> "supplier" ;
+		<http://www.w3.org/ns/csvw#supressOutput> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://www.w3.org/ns/csvw#valueUrl> "" .
+	
+	<http://etl.linkedpipes.com/resources/components/t-tabular/0.0.0/new/2> a <http://www.w3.org/ns/csvw#Table> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#baseUri> "http://example.com/" ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#baseUriControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#dialectControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#encodeType> "emptyHost" ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#encodeTypeControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#fullMapping> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#fullMappingControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#generateNullHeaderNames> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#generateNullHeaderNamesControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#normalOutput> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#normalOutputControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#rowLimit> "-1"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#rowLimitControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#skipLines> "0"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#skipLinesControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#tableSchemaControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#useBaseUri> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://plugins.linkedpipes.com/ontology/t-tabular#useBaseUriControl> <http://plugins.linkedpipes.com/resource/configuration/None> ;
+		<http://www.w3.org/ns/csvw#dialect> <http://etl.linkedpipes.com/resources/components/t-tabular/0.0.0/new/3> ;
+		<http://www.w3.org/ns/csvw#tableSchema> <http://etl.linkedpipes.com/resources/components/t-tabular/0.0.0/new/1> .
+	
+	<http://etl.linkedpipes.com/resources/components/t-tabular/0.0.0/new/3> a <http://www.w3.org/ns/csvw#Dialect> ;
+		<http://www.w3.org/ns/csvw#delimeter> "," ;
+		<http://www.w3.org/ns/csvw#encoding> "UTF-8" ;
+		<http://www.w3.org/ns/csvw#header> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://www.w3.org/ns/csvw#quoteChar> "\"" ;
+		<http://www.w3.org/ns/csvw#skipRows> "0"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+		<http://www.w3.org/ns/csvw#trim> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+}

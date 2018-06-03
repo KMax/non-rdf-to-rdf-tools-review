@@ -1,0 +1,784 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix karma: <http://isi.edu/integration/karma/ontologies/model/current#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1cf3l1olax1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "contracts_223fz_201803-head-100.json" ;
+	km-dev:modelPublicationTime "1528057356970"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"contractCreateDate\"}],[{\"columnName\":\"id\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"contract_uri\"}],[{\"columnName\":\"customer\"},{\"columnName\":\"customer_uri\"}],[{\"columnName\":\"contractCreateDate\"}],[{\"columnName\":\"suppliers\"},{\"columnName\":\"supplier_uri\"}]]" ;
+	km-dev:hasModelLabel "contracts_223fz_201803-head-100.json" ;
+	km-dev:hasBaseURI "http://example.com/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SetWorksheetPropertiesCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"properties\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": true,
+                    \"baseURI\": \"http://example.com/\",
+                    \"hasPrefix\": false,
+                    \"hasServiceProperties\": false
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"id\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"contract_uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"return \\\"contract/\\\" + getValue(\\\"id\\\")\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"id\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"contract_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"customer\"},
+                    {\"columnName\": \"OGRN\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"customer_uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"return \\\"org/\\\" + getValue(\\\"OGRN\\\")\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"customer\\\"},{\\\"columnName\\\":\\\"customer_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"suppliers\"},
+                    {\"columnName\": \"ogrn\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"supplier_uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"return \\\"org/\\\" + getValue(\\\"ogrn\\\")\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"suppliers\\\"},{\\\"columnName\\\":\\\"supplier_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"OperateSelectionCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"suppliers\"},
+                    {\"columnName\": \"ogrn\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"pythonCode\",
+                \"type\": \"other\",
+                \"value\": \"return getValue(\\\"ogrn\\\") != \\\"\\\"\"
+            },
+            {
+                \"name\": \"operation\",
+                \"type\": \"other\",
+                \"value\": \"Union\"
+            },
+            {
+                \"name\": \"onError\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Selection\"]
+    },
+    {
+        \"commandName\": \"ClearSelectionCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"suppliers\"},
+                    {\"columnName\": \"ogrn\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"type\",
+                \"type\": \"other\",
+                \"value\": \"Column\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Selection\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"contract_uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://example.com/Contract\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://example.com/Contract1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://example.com/Contract\",
+                    \"DomainId\": \"http://example.com/Contract1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"http://example.com/Contract/Contract1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"contract_uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"contract_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"contractCreateDate\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://example.com/Contract\",
+                    \"DomainId\": \"http://example.com/Contract1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://example.com/created\",
+                    \"DomainLabel\": \"http://example.com/Contract/Contract1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"xsd:date\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"contractCreateDate\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"contractCreateDate\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"customer\"},
+                    {\"columnName\": \"customer_uri\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.w3.org/2002/07/owl#Thing\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.w3.org/2002/07/owl#Thing1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.w3.org/2002/07/owl#Thing\",
+                    \"DomainId\": \"http://www.w3.org/2002/07/owl#Thing1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"owl:Thing1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"customer\\\"},{\\\"columnName\\\":\\\"customer_uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"customer\\\"},{\\\"columnName\\\":\\\"customer_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"suppliers\"},
+                    {\"columnName\": \"supplier_uri\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.w3.org/2002/07/owl#Thing\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.w3.org/2002/07/owl#Thing2\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.w3.org/2002/07/owl#Thing\",
+                    \"DomainId\": \"http://www.w3.org/2002/07/owl#Thing2\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"owl:Thing2 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"suppliers\\\"},{\\\"columnName\\\":\\\"supplier_uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"suppliers\\\"},{\\\"columnName\\\":\\\"supplier_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.w3.org/2002/07/owl#Thing1\",
+                    \"edgeId\": \"http://example.com/customer\",
+                    \"edgeTargetUri\": \"http://www.w3.org/2002/07/owl#Thing\",
+                    \"edgeSourceId\": \"http://example.com/Contract1\",
+                    \"edgeSourceUri\": \"http://example.com/Contract\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.w3.org/2002/07/owl#Thing2\",
+                    \"edgeId\": \"http://example.com/supplier\",
+                    \"edgeTargetUri\": \"http://www.w3.org/2002/07/owl#Thing\",
+                    \"edgeSourceId\": \"http://example.com/Contract1\",
+                    \"edgeSourceUri\": \"http://example.com/Contract\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    }
+]""" .
+
+km-dev:TriplesMap_46928607-4694-4007-9d95-499d84743d17 a rr:TriplesMap .
+
+_:node1cf3l1olax1 km-dev:hasTriplesMap km-dev:TriplesMap_46928607-4694-4007-9d95-499d84743d17 .
+
+km-dev:TriplesMap_46928607-4694-4007-9d95-499d84743d17 km-dev:isPartOfMapping _:node1cf3l1olax1 .
+
+_:node1cf3l1olax2 rr:tableName "contracts_223fz_201803-head-100.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cf3l1olax1 .
+
+_:node1cf3l1olax1 km-dev:hasLogicalTable _:node1cf3l1olax2 .
+
+km-dev:TriplesMap_46928607-4694-4007-9d95-499d84743d17 rr:logicalTable _:node1cf3l1olax2 ;
+	rr:subjectMap _:node1cf3l1olax3 .
+
+_:node1cf3l1olax1 km-dev:hasSubjectMap _:node1cf3l1olax3 .
+
+_:node1cf3l1olax3 km-dev:isPartOfMapping _:node1cf3l1olax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://example.com/Contract1" ;
+	rr:class <http://example.com/Contract> ;
+	rr:template "contract/{id}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_ab45239d-42a4-427b-b5d2-e98f0c46385a rr:predicate <http://example.com/customer> .
+
+km-dev:RefObjectMap_033d57f2-568b-4be3-89ec-177a93c4fd49 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_23d7a58b-0454-410c-9af1-5678b6fa2edc ;
+	km-dev:isPartOfMapping _:node1cf3l1olax1 .
+
+_:node1cf3l1olax1 km-dev:hasObjectMap km-dev:RefObjectMap_033d57f2-568b-4be3-89ec-177a93c4fd49 .
+
+km-dev:PredicateObjectMap_ab45239d-42a4-427b-b5d2-e98f0c46385a rr:objectMap km-dev:RefObjectMap_033d57f2-568b-4be3-89ec-177a93c4fd49 .
+
+km-dev:TriplesMap_46928607-4694-4007-9d95-499d84743d17 rr:predicateObjectMap km-dev:PredicateObjectMap_ab45239d-42a4-427b-b5d2-e98f0c46385a .
+
+km-dev:PredicateObjectMap_ab45239d-42a4-427b-b5d2-e98f0c46385a a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cf3l1olax1 .
+
+_:node1cf3l1olax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ab45239d-42a4-427b-b5d2-e98f0c46385a .
+
+km-dev:PredicateObjectMap_e6753e1b-e209-496b-9ee7-e5484a2f85f4 rr:predicate <http://example.com/supplier> .
+
+km-dev:RefObjectMap_2fe1c03d-2148-4cb0-b71e-6a2a2f956e9e a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_346cc30e-63fc-49b5-8c92-230558b3ab7f ;
+	km-dev:isPartOfMapping _:node1cf3l1olax1 .
+
+_:node1cf3l1olax1 km-dev:hasObjectMap km-dev:RefObjectMap_2fe1c03d-2148-4cb0-b71e-6a2a2f956e9e .
+
+km-dev:PredicateObjectMap_e6753e1b-e209-496b-9ee7-e5484a2f85f4 rr:objectMap km-dev:RefObjectMap_2fe1c03d-2148-4cb0-b71e-6a2a2f956e9e .
+
+km-dev:TriplesMap_46928607-4694-4007-9d95-499d84743d17 rr:predicateObjectMap km-dev:PredicateObjectMap_e6753e1b-e209-496b-9ee7-e5484a2f85f4 .
+
+km-dev:PredicateObjectMap_e6753e1b-e209-496b-9ee7-e5484a2f85f4 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cf3l1olax1 .
+
+_:node1cf3l1olax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_e6753e1b-e209-496b-9ee7-e5484a2f85f4 .
+
+km-dev:PredicateObjectMap_c3b72fd8-aa93-4535-8481-f1a69af13abd rr:predicate <http://example.com/created> .
+
+_:node1cf3l1olax4 rr:column "contractCreateDate" ;
+	a rr:ObjectMap ;
+	rr:datatype "http://www.w3.org/2001/XMLSchema#date" ;
+	km-dev:isPartOfMapping _:node1cf3l1olax1 .
+
+_:node1cf3l1olax1 km-dev:hasObjectMap _:node1cf3l1olax4 .
+
+km-dev:PredicateObjectMap_c3b72fd8-aa93-4535-8481-f1a69af13abd rr:objectMap _:node1cf3l1olax4 .
+
+km-dev:TriplesMap_46928607-4694-4007-9d95-499d84743d17 rr:predicateObjectMap km-dev:PredicateObjectMap_c3b72fd8-aa93-4535-8481-f1a69af13abd .
+
+km-dev:PredicateObjectMap_c3b72fd8-aa93-4535-8481-f1a69af13abd a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cf3l1olax1 .
+
+_:node1cf3l1olax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c3b72fd8-aa93-4535-8481-f1a69af13abd .
+
+km-dev:TriplesMap_23d7a58b-0454-410c-9af1-5678b6fa2edc a rr:TriplesMap .
+
+_:node1cf3l1olax1 km-dev:hasTriplesMap km-dev:TriplesMap_23d7a58b-0454-410c-9af1-5678b6fa2edc .
+
+km-dev:TriplesMap_23d7a58b-0454-410c-9af1-5678b6fa2edc km-dev:isPartOfMapping _:node1cf3l1olax1 .
+
+_:node1cf3l1olax5 rr:tableName "contracts_223fz_201803-head-100.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cf3l1olax1 .
+
+_:node1cf3l1olax1 km-dev:hasLogicalTable _:node1cf3l1olax5 .
+
+km-dev:TriplesMap_23d7a58b-0454-410c-9af1-5678b6fa2edc rr:logicalTable _:node1cf3l1olax5 ;
+	rr:subjectMap _:node1cf3l1olax6 .
+
+_:node1cf3l1olax1 km-dev:hasSubjectMap _:node1cf3l1olax6 .
+
+_:node1cf3l1olax6 km-dev:isPartOfMapping _:node1cf3l1olax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.w3.org/2002/07/owl#Thing1" ;
+	rr:class owl:Thing ;
+	rr:template "org/{[\"customer\",\"OGRN\"]}" .
+
+km-dev:TriplesMap_346cc30e-63fc-49b5-8c92-230558b3ab7f a rr:TriplesMap .
+
+_:node1cf3l1olax1 km-dev:hasTriplesMap km-dev:TriplesMap_346cc30e-63fc-49b5-8c92-230558b3ab7f .
+
+km-dev:TriplesMap_346cc30e-63fc-49b5-8c92-230558b3ab7f km-dev:isPartOfMapping _:node1cf3l1olax1 .
+
+_:node1cf3l1olax7 rr:tableName "contracts_223fz_201803-head-100.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cf3l1olax1 .
+
+_:node1cf3l1olax1 km-dev:hasLogicalTable _:node1cf3l1olax7 .
+
+km-dev:TriplesMap_346cc30e-63fc-49b5-8c92-230558b3ab7f rr:logicalTable _:node1cf3l1olax7 ;
+	rr:subjectMap _:node1cf3l1olax8 .
+
+_:node1cf3l1olax1 km-dev:hasSubjectMap _:node1cf3l1olax8 .
+
+_:node1cf3l1olax8 km-dev:isPartOfMapping _:node1cf3l1olax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.w3.org/2002/07/owl#Thing2" ;
+	rr:class owl:Thing ;
+	rr:template "org/{[\"suppliers\",\"ogrn\"]}" .
